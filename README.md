@@ -25,3 +25,29 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Resolvando Problema de nao declarar Variavel
+Acesse seu tsconfig.jsonarquivo e altere a propriedade:
+
+ "noImplicitReturns": false
+e então adicionar
+
+ "strictPropertyInitialization": false
+sob "compilerOptions"propriedade.
+
+Seu tsconfig.jsonarquivo deve ser semelhante a:
+
+
+{
+      ...
+      "compilerOptions": {
+            ....
+            "noImplicitReturns": false,
+            ....
+            "strictPropertyInitialization": false
+      },
+      "angularCompilerOptions": {
+         ......
+      }  
+ }
