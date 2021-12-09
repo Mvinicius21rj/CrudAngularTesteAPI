@@ -5,12 +5,14 @@
     <td> Nome</td>
     <td>Sobrenome</td>
     <td>Email</td>
+    <td>...</td>
     </thead>
     <tbody>
         <tr *ngFor="let user of responseUsers.data">
             <td>{{user.first_name}}</td>
             <td>{{user.last_name}}tal</td>
             <td>{{user.email}}</td>
+            <td><a routerLink="/users/update/{{user.id}}">Editar</a></td>
         </tr>
     </tbody>
 </table>

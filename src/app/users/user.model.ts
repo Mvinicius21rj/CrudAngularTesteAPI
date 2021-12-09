@@ -28,3 +28,24 @@ export interface RequestCreate {
         id: string;
         createdAt: Date;
     }
+
+
+    // modelo para o get user
+
+    export interface ResponseUser{
+        data: User;
+    }
+
+    // modelos para update
+
+    export interface RequestUpadate{
+       name: string;
+       job: string;
+
+    }
+    export interface ResponseUpadate{
+        name: string;
+        job: string;
+        updateAt: Date;
+ 
+     }
