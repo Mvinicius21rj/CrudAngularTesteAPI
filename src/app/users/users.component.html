@@ -12,7 +12,8 @@
             <td>{{user.first_name}}</td>
             <td>{{user.last_name}}tal</td>
             <td>{{user.email}}</td>
-            <td><a routerLink="/users/update/{{user.id}}">Editar</a></td>
+            <td><a routerLink="/users/update/{{user.id}}">Editar</a> |
+            <a routerLink="/users/delete/{{user.id}}">Remover</a></td>
         </tr>
     </tbody>
 </table>

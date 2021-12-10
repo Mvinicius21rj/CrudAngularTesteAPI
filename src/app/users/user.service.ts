@@ -29,9 +29,15 @@ export class UserService {
   }
   updateUser(id:string, request:RequestUpadate): Observable<ResponseUpadate>{
     const _url = `${this.url}/${id}`;
-    return this.http.put<ResponseUpadate>(this.url,request);
+    return this.http.put<ResponseUpadate>(_url,request);
     
+  }
 
+ deleteUser(id:string): Observable<any>{
+    const _url = `${this.url}/${id}`;
+
+    return this.http.delete<any>(_url);
+    
   }
   
 
